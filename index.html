@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+<h1>Hello, Vue! Sup?</h1>
+<div id="app">
+    <p>{{teamName}} - {{teamManager}} - {{stadiumName}} - {{stadiumCapacity}}</p>
+    <button v-on:click="stadiumCapacity++">Increase Capacity</button>
+    <button @click="decreaseCapacity">Decrease Capacity</button>
+    <button @click="toggleShowTeam">Hide/Show Team</button>
+    <div v-if="show">
+        <p>{{teamName}}</p>
+    </div>
+    <ul>
+        <li v-for="title in titles">
+            <h3>{{title}}</h3>
+        </li>
+    </ul>
+    <a :href="url">Visit team site</a>
+</div>
+</body>
+</html>
